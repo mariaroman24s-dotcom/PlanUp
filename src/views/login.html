@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login y registro</title>
+        <link rel="stylesheet" href="../../public/css/login.css">
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="form-box login">
+                <form action="../config/login.php" method="POST">
+                    <h1 id="logintext">¡Bienvenido de nuevo!</h1>
+                    <div class="input-box">
+                        <input type="email" name="correo" placeholder="Correo" required>
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="contraseña" placeholder="Contraseña" id="Contraseña">
+                        <i class='bx bxs-lock-alt'></i>
+                        <i class='bx bx-hide toggle-eye'></i> 
+                    </div>
+                    <div class="forgot-link">
+                        <a href="#">¿Olvidaste tu contraseña? Haz click aquí</a>
+                    </div>
+                    <button type="submit" class="btn">Iniciar sesión</button>
+                    <p>o continua con</p>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-google'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                    </div>
+                </form>
+            </div>
+
+            <div class="form-box register">
+                <form action="../config/register.php" method="POST">
+                    <h1>¡Crea una nueva cuenta!</h1>
+                    <div class="input-box">
+                        <input type="text" name="nombre" placeholder="Nombre o apodo" required>
+                        <i class='bx bxs-user'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="correo" placeholder="Correo" required>
+                        <i class='bx bx-envelope'></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" name="contraseña" placeholder="Contraseña"
+                        required>
+                        <i class='bx bxs-lock-alt'></i>
+                        <i class='bx bx-hide toggle-eye'></i>
+                    </div>
+                    <div class="input-box"> 
+                        <input type="password" name="confirmar" placeholder="Confirmar contraseña"
+                        required>
+                        <i class='bx bxs-lock-alt'></i>
+                        <i class='bx bx-hide toggle-eye'></i>
+                    </div>
+                    <button type="submit" class="btn">Crear cuenta</button>
+                    <p>o continua con</p>
+                    <div class="social-icons">
+                        <a href="#"><i class='bx bxl-google'></i></a>
+                        <a href="#"><i class='bx bxl-facebook'></i></a>
+                    </div>
+                </form>
+            </div>
+
+            <img id="jennyLogin" class="jenny-login" src="../../public/img/jenny_saludando.webp" alt="Jenny Login">
+            <img id="jennyRegister" class="jenny-register" src="../../public/img/jenny_saludando.webp" alt="Jenny Register">
+            <div class="toggle-box">
+                <div class="toggle-panel toggle-left">                    
+                    <h1>¡Crea una nueva cuenta!</h1>
+                    <p>¡Estás a un paso de transformar tu día a día!</p>
+                    <p>Crea tu cuenta y empieza a organizarte de manera</p>
+                    <p>fácil y rápida.</p>
+                    <p>¡Por una vida productiva!</p>
+                    <button class="btn register-btn">Registrate</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>Bienvenido de nuevo!</h1>
+                    <p>¡Te extrañamos! </p>
+                    <p>Cada día es una nueva oportunidad para avanzar. </p>
+                    <p>Inicia sesión en Plan Up y organiza tu día para </p>
+                    <p>seguir creciendo.</p>
+                    <button class="btn login-btn">Inicia sesión</button>
+                </div>
+            </div>
+        </div>
+    
+        <script src="../../public/js/login.js"></script>
+                <script>
+        const params = new URLSearchParams(window.location.search);
+        const mode = params.get("mode");
+
+        if (mode === "register") {
+            // activar panel de registro
+            container.classList.add("active");
+            activeJenny = "register";
+            jennyLogin.style.opacity = '0';
+            jennyRegister.style.opacity = '1';
+        } else {
+            // activar panel de login (por defecto)
+            container.classList.remove("active");
+            activeJenny = "login";
+            jennyRegister.style.opacity = '0';
+            jennyLogin.style.opacity = '1';
+        }
+        </script>
+    </body>
+</html>
