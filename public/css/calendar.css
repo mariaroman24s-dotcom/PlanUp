@@ -1,0 +1,350 @@
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ----- CALENDARIO MENSUAL ----- */
+.calendar-month-box {
+    background: white;
+    padding: 8px 8px;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-top: 0;
+    padding-top: 0px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-top: 5px;
+}
+
+.day {
+    width: 30px;         /* tamaño más pequeño */
+    height: 30px;
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 0;
+    font-size: 15px;
+}
+
+.day.today {
+    background: #5660ff;
+    color: white;
+}
+
+.day.selected {
+    outline: 3px solid #8B5CF6;
+    background: white;
+    color: #8B5CF6;
+}
+
+.day .dot {
+    width: 6px;
+    height: 6px;
+    background: #8B5CF6;
+    border-radius: 50%;
+    margin: 4px auto 0;
+    display: block;
+}
+
+.day.empty {
+    background: transparent;
+    cursor: default;
+}
+
+/* ----- CALENDARIO HORIZONTAL ----- */
+.calendar-horizontal {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 2;
+}
+
+.circle-day {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.circle-day.today {
+    background: #5660ff;
+    color: white;
+    border-color: #5660ff;
+}
+
+.circle-day.selected {
+    border-color: #8B5CF6;
+    background: white;
+    color: #8B5CF6;
+}
+
+.circle-day .dot {
+    width: 6px;
+    height: 6px;
+    background: #8B5CF6;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 4px;
+}
+
+/* ---- Ajuste para panel izquierdo ---- */
+.calendario-wrapper {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.calendar-container {
+    width: 100%;
+    max-width: 260px; /* ajusta según tu diseño */
+    margin: 0 auto;
+    padding: 0px 0;
+}
+
+.weekday {
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    color: #4a4a4a;
+    padding-bottom: 6px;
+}
+
+.day.inactive {
+    color: #bcbcbc;
+    background: transparent;
+    cursor: default;
+    opacity: 0.6;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.month-btn.modern {
+    background: transparent;
+    border: none;
+    color: #6b5bff;            /* mismo color que tu dropdown */
+    font-size: 16px;
+    padding: 4px 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.2s ease;
+}
+
+.month-btn.modern:hover {
+    background: #ece8ff;       /* suave lavanda */
+}
+
+.month-year-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0C2C58;
+    position: relative;
+}
+
+.year-selector {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.year-text {
+    font-weight: 600;
+}
+
+.year-dropdown-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 3px;
+    color: #6b5bff;
+}
+
+.year-dropdown-btn:hover {
+    opacity: 0.7;
+}
+
+.year-dropdown {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    padding: 6px 0;
+    z-index: 20;
+    width: 80px;
+}
+
+.year-dropdown.hidden {
+    display: none;
+}
+
+.year-option {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #0C2C58;
+    text-align: center;
+}
+
+.year-option:hover {
+    background: #f0f3ff;
+}
+
+.hcal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+}
+
+.hcal-btn {
+    background: transparent;
+    border: none;
+    font-size: 35px;
+    color: #6b5bff;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 4px 8px;
+    transition: 0.2s;
+}
+
+.hcal-btn:hover {
+    background: #ece8ff;
+}
+
+#hcal {
+    flex-grow: 0;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 90%;
+}
+
+#hcal::-webkit-scrollbar {
+    display: none;
+}
+
+/* CONTENEDOR GENERAL */
+.hcal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6px;
+    margin-bottom: 10px;
+}
+
+/* MES / AÑO */
+.hcal-month-label {
+    font-size: 17px;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 4px;
+}
+
+/* ENCABEZADO DE DÍAS */
+.hcal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    width: 100%;
+    max-width: 620px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #777;
+    margin-bottom: 4px;
+}
+
+/* BOTONES DE NAVEGACIÓN */
+.hcal-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+}
+
+.hcal-btn {
+    background: transparent;
+    border: none;
+    font-size: 26px;
+    color: #6b5bff;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 8px;
+    transition: 0.2s;
+}
+
+.hcal-btn:hover {
+    background: #ece8ff;
+}
+
+/* LISTA DE DÍAS */
+#hcal {
+    flex-grow: 0;
+    width: auto;
+    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+#hcal::-webkit-scrollbar {
+    display: none;
+}
+
+.hcal-weekdays-long {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 6px;
+    font-size: 12px;
+    color: #777;
+    padding-top: 6px;
+}
+
+.hcal-weekdays-long div {
+    width: 32px;
+    height: 16px;
+    text-align: center;
+    font-weight: 600;
+    color: #0C2C58;
+    
+}
+
+/* Contenedor de letras de días */
+.hcal-weekdays-long {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /* 15 días (-7 al +7) */
+    column-gap: 23px; /* igual al espacio entre círculos */
+    margin: 0 auto;
+    width: fit-content;
+    padding-bottom: 6px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}

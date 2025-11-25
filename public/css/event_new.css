@@ -1,0 +1,76 @@
+.btn-new-event {
+    padding: 10px 20px;
+    border-radius: 12px;
+    background: #0C175A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-new-event:hover {
+    transform: scale(1.04);
+}
+
+/* Modal */
+.event-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.event-modal.hidden {
+    display: none;
+}
+
+.event-modal-content {
+    width: 420px;
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.modal-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #0C2C58;
+}
+
+.event-modal-content input,
+.event-modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cancel {
+    background: #ccc;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}
+
+.save {
+    background: #456FED;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}

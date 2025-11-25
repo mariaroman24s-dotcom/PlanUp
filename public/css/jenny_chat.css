@@ -1,0 +1,144 @@
+/* BOTÓN FLOTANTE */
+.jenny-floating-btn {
+    position: fixed;
+    bottom: 26px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #456FED, #BF50FF);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .2s ease;
+    z-index: 999;
+}
+
+.jenny-floating-btn:hover {
+    transform: scale(1.08);
+}
+
+.jenny-floating-btn img {
+    width: 55px;
+}
+
+
+/* VENTANA DEL CHAT */
+.jenny-chat-window {
+    position: fixed;
+    bottom: 110px;
+    right: 30px;
+    width: 380px;
+    height: 540px;
+    background: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 998;
+    animation: fadeIn .25s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* HEADER */
+.jenny-header {
+    height: 110px;
+    background: linear-gradient(90deg, #456FED, #BE50FF);
+    color: white;
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.jenny-header-text h3 {
+    font-size: 15px;
+    opacity: .9;
+    margin-bottom: 2px;
+}
+
+.jenny-header-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.jenny-header-img {
+    width: 110px;
+    margin-top: 5px;
+    pointer-events: none;
+}
+
+
+/* MENSAJES */
+.jenny-messages {
+    flex: 1;
+    padding: 18px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Burbuja bot */
+.bubble.bot {
+    max-width: 75%;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #6A5CFF, #8B4DFF);
+    color: white;
+    border-radius: 15px 15px 15px 4px;
+    align-self: flex-start;
+    font-size: 14px;
+}
+
+/* Burbuja usuario */
+.bubble.user {
+    max-width: 75%;
+    padding: 12px 16px;
+    background: #EBEBEB;
+    color: #333;
+    border-radius: 15px 15px 4px 15px;
+    align-self: flex-end;
+    font-size: 14px;
+}
+
+
+/* INPUT BOX */
+.jenny-input-box {
+    height: 65px;
+    background: #ffffff;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #eee;
+}
+
+.jenny-input-box input {
+    flex: 1;
+    height: 40px;
+    border-radius: 14px;
+    border: none;
+    background: #ECECEC;
+    padding: 0 12px;
+    outline: none;
+}
+
+#jenny-send {
+    width: 45px;
+    height: 40px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #456FED, #BF50FF);
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

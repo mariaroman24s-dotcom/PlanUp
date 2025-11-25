@@ -1,0 +1,84 @@
+/* reset */
+* {
+  box-sizing: border-box;
+}
+
+/* top bar */
+.topbar {
+  position: relative;
+  z-index: 50;
+}
+
+/* side bar */
+.sidebar {
+  width: 95px;
+  background-color: #1C1F53;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 28px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  margin-top: 0;
+}
+
+/* Items */
+.sidebar-item {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+  color: #D1D5DB;
+  transition: 0.2s ease;
+  position: relative;
+}
+
+.sidebar-item img {
+  margin: 0 auto 4px auto;
+}
+
+.sidebar-item:hover {
+  opacity: 0.8;
+}
+
+/* Para que se active el glow cada que pase por un icono */
+.sidebar-item.active {
+  color: white;
+}
+
+.sidebar-item.active::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 78px;
+  height: 78px;
+  background-image: url("/public/img/menuimg/glow.png"); /* glow PNG */
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+/* Avatar inferior */
+.user-avatar {
+  margin-bottom: 10px;
+}
+
+/* paneles*/
+.panel-left,
+.panel-main {
+  min-height: 620px;
+}
+
+.panel-left {
+  width: 32%;
+}
+
+.panel-main {
+  width: 68%;
+}
+
+.day.inactive {
+    color: #bbbbbb;
+    opacity: 0.6;
+}

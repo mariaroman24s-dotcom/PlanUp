@@ -1,0 +1,50 @@
+.small-events-box {
+    background: white;
+    padding: 18px;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.small-events-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0C2C58;
+    margin-bottom: 10px;
+}
+
+.small-events-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.small-events-list li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+.small-events-list li:not(:last-child) {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.event-icon {
+    font-size: 16px;
+}
+
+.event-title {
+    font-weight: 600;
+}
+
+.event-date {
+    color: #777;
+    font-size: 12px;
+}
+
+.no-events {
+    color: #777;
+    font-size: 14px;
+}

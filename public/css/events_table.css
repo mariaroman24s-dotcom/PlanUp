@@ -1,0 +1,50 @@
+.events-table-box {
+    margin-top: 15px;
+    background: #F7F6FF;
+    border-radius: 18px;
+    padding: 18px;
+}
+
+.table-title {
+    background: #825CFF;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.events-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.events-table th {
+    text-align: left;
+    padding-bottom: 10px;
+    color: #0C2C58;
+}
+
+.events-table td {
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.edit-btn {
+    background: #6A6CF6;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.delete-btn {
+    background: #D72323;
+    color: white;
+    padding: 6px 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
